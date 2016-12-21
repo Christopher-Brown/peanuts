@@ -16,8 +16,10 @@ mongoose.connect('mongodb://localhost/ExpressMVC', (error)=>{
     }
 });
 
-app.get('/', (req, res)=>{
-        res.sendFile('webpage.txt', {root:"./public"} );
+app.get('/',(req, res)=>{
+        res.setTimeout(4000, function(){
+        res.sendFile('index.html', {root:"./public"} );
+        });
 });
 
 app.listen(PORT, (err)=>{
