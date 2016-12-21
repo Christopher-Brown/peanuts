@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var app = express();
 
 var PORT = process.env.PORT || 3000;
+app.use(express.static('public'));
 app.use(bodyParser.json(), bodyParser.urlencoded({extended:true}));
 
 mongoose.connect('mongodb://localhost/ExpressMVC', (error)=>{
@@ -16,8 +17,8 @@ mongoose.connect('mongodb://localhost/ExpressMVC', (error)=>{
 });
 
 app.get('/',(req, res)=>{
-        res.setTimeout(4000, function(){
-        res.sendFile('index.html', {root:"./public"} );
+        res.setTimeout(2000, function(){
+        res.sendFile('booty.html', {root:"./public"} );
         });
 });
 
