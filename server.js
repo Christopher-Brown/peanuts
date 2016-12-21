@@ -7,7 +7,10 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json(), bodyParser.urlencoded({extended:true}));
-app.use(static("./public"));
+app.use(
+    compression(),
+    static("./public")
+    );
 
 app.get('/',(req, res)=>{
         res.setTimeout(4000, function(){
