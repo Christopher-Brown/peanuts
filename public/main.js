@@ -3,7 +3,7 @@ angular.module('Booty',[])
 
 function bootyFunction() {
     var bCtrl = this;
-
+bCtrl.pageShow = true;
     this.greeting = 'Hello';
     // call $http and get all the student from the database
 
