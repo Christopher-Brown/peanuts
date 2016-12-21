@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost/ExpressMVC', (error)=>{
 });
 
 app.get('/',(req, res)=>{
-        res.setTimeout(4000, function(){
+        setTimeout(4000, function(){
         res.sendFile('index.html', {root:"./public"} );
         });
 });
