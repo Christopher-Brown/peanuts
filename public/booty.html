@@ -5,7 +5,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="main.js"></script>
     </head>
-    <body ng-controller="BootyController as bCtrl"ng-mouseover="bCtrl.toggle1()" ng-show="!bCtrl.pageShow" >
+    <body ng-controller="BootyController as bCtrl">
+<div ng-show="!bCtrl.pageShow">
+<div ng-mouseover="bCtrl.toggle1()">
         <h1>{{bCtrl.greeting}}<h1>
                     <h2> You scrape dis? you win dis<h2>
  <p1>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
@@ -15,6 +17,8 @@ Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot 
  <p2>
 Love, 
 Charlie, Chris, Jeremy</p2>
+</div>
+</div>
     </body>
 </html>
 
