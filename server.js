@@ -8,7 +8,6 @@ var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json(), bodyParser.urlencoded({extended:true}));
 app.use(
-    compression(),
     static("./public")
     );
 
